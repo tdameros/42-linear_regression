@@ -1,0 +1,23 @@
+[package]
+name = "linear_regression_bin"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[workspace]
+members = [
+    "linear_regression",
+]
+
+[dependencies]
+linear_regression = { path = "./linear_regression" }
+clap = { version = "4.5.4", features = ["derive"] }
+
+[[bin]]
+name = "train"
+path = "src/bin/train.rs"
+
+[[bin]]
+name = "predict"
+path = "src/bin/predict.rs"
