@@ -57,6 +57,15 @@ Options:
   -V, --version  Print version
 ```
 
+### Docker
+
+In the docker image, both binaries are already compiled in the main folder.
+
+```bash
+docker build -t linear_regression .
+docker run -v ./assets:/linear_regression/assets/ -it linear_regression
+```
+
 ## Example
 
 Using the experience/salary dataset, it's possible to predict a person's salary (in thousands) based on their
