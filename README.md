@@ -28,7 +28,7 @@ Options:
   -o, --output-model-path <OUTPUT_MODEL_PATH>
           Output model path [default: linear_model.csv]
       --plot-path <PLOT_PATH>
-          Plot path [default: plot.png]
+          Plot path [default: plot.svg]
   -i, --iterations <ITERATIONS>
           Number of iterations [default: 10000]
   -l, --learning-rate <LEARNING_RATE>
@@ -76,5 +76,5 @@ cargo run --bin predict 19 linear_model.csv
 
 ## Screenshots
 
-![graph](assets/salary_plot.png)
+![graph](assets/salary_plot.svg)
 

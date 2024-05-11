@@ -18,7 +18,7 @@ pub fn plot_linear_model(
     dataset: &Dataset,
     path: &str,
 ) -> Result<(), Box<dyn Error>> {
-    let root = BitMapBackend::new(path, (PLOT_WIDTH, PLOT_HEIGHT)).into_drawing_area();
+    let root = SVGBackend::new(path, (PLOT_WIDTH, PLOT_HEIGHT)).into_drawing_area();
 
     root.fill(&WHITE)?;
     let mut chart = ChartBuilder::on(&root)

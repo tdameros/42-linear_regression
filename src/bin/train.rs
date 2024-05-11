@@ -14,7 +14,7 @@ struct Args {
     output_model_path: String,
 
     /// Plot path
-    #[arg(long, default_value = "plot.png")]
+    #[arg(long, default_value = "plot.svg")]
     plot_path: String,
 
     /// Number of iterations
