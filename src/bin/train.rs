@@ -41,9 +41,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let mut dataset = Dataset::load(&args.dataset_path)?;
     dataset.normalize();
     model.train(&dataset, args.iterations);
-    model.save(&args.output_model_path)?;
     model.denormalize(&dataset);
     dataset.denormalize();
+    model.save(&args.output_model_path)?;
 
     println!("{:?}", model);
     if args.plot {
