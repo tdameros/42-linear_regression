@@ -63,7 +63,7 @@ In the docker image, both binaries are already compiled in the main folder.
 
 ```bash
 docker build -t linear_regression .
-docker run -v ./assets:/linear_regression/assets/ -it linear_regression
+docker run --rm -v ./assets:/linear_regression/assets/ -it linear_regression
 ```
 
 ## Example
