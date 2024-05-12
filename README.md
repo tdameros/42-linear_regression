@@ -59,11 +59,12 @@ Options:
 
 ### Docker
 
-In the docker image, both binaries are already compiled in the main folder.
+In the docker image, the binaries are already compiled in the /usr/local/bin/ folder and can simply be used as shell
+commands.
 
 ```bash
 docker build -t linear_regression .
-docker run --rm -v ./assets:/linear_regression/assets/ -it linear_regression
+docker run --rm -v ./assets:/app/assets/ -it linear_regression
 ```
 
 ## Example
