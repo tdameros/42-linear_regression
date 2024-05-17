@@ -108,8 +108,8 @@ impl LinearModel {
     pub fn denormalize(&mut self, dataset: &Dataset) {
         let range_x = dataset.x.max - dataset.x.min;
         let range_y = dataset.y.max - dataset.y.min;
-        self.a *= (range_y) / (range_x);
-        self.b = range_y * self.b + dataset.y.min - range_y / range_x * dataset.x.min * self.a;
+        self.a *= range_y / range_x;
+        self.b = range_y * self.b + dataset.y.min - self.a * dataset.x.min;
     }
 
     pub fn mean_absolute_percentage_error(&self, dataset: &Dataset) -> f64 {
